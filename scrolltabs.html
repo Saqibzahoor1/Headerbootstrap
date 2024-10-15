@@ -1,0 +1,467 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .wrapper {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: start;
+        margin-left: 100px;
+        align-items: center;
+        margin-bottom: 10px;
+        position: absolute;
+        top: -35px;
+    }
+
+    .btn {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 15px 30px;
+        margin: 2px;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #ededed;
+        transition: all .2s ease-in-out;
+    }
+
+    /**   card hover (start)        **/
+
+    .btn:nth-child(1):hover {
+        background-color: #3677DC;
+        color: white;
+
+    }
+
+    .btn:nth-child(2):hover {
+        background-color: #052149;
+
+        color: white;
+    }
+
+    .btn:nth-child(3):hover {
+        background-color: #7B20B5;
+        color: white;
+    }
+
+    .btn:nth-child(1).active {
+        background-color: #3677DC;
+        color: white;
+
+    }
+
+    .btn:nth-child(2).active {
+        background-color: #052149;
+
+        color: white;
+    }
+
+    .btn:nth-child(3).active {
+        background-color: #7B20B5;
+        color: white;
+    }
+
+    /**   card hover (end)        **/
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .card {
+        width: 100%;
+        height: 768px;
+        border-radius: 30px;
+        position: absolute;
+        display: flex;
+        padding: 20px;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        z-index: -1;
+    }
+
+    .card .text-content {
+        width: 45%;
+    }
+
+    .card .img-container {
+        display: flex;
+        align-items: center;
+        width: 45%;
+    }
+
+    .card .img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .cards .card .text-content .card-head {
+        font-weight: 500;
+        font-size: 36px;
+        font-weight: 600;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+
+    .card:nth-child(1) .text-content .card-head {
+        color: #3677dc;
+    }
+
+    .card:nth-child(2) .text-content .card-head {
+        color: #052149;
+    }
+
+    .card:nth-child(3) .text-content .card-head {
+        color: #7B20B5;
+    }
+
+    /******  SUB CARDS *******/
+    .sub-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .sub-card {
+        background-color: #ffffff;
+        padding: 4px 8px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sub-card .sub-card-head {
+        font-size: 16px;
+        font-weight: 800;
+        /*** to align text content of different cards **/
+        /*height:10%;*/
+        letter-spacing: 1px;
+    }
+
+    .sub-card .sub-card-text {
+        font-size: 12px;
+    }
+
+    /******  SUB CARDS (end) *******/
+
+    .card:nth-child(1) {
+        background-color: #f3f7fd;
+    }
+
+    .card:nth-child(2) {
+        background-color: #fbfaf9;
+    }
+
+
+    .card:nth-child(3) {
+        background-color: #faf6fc;
+    }
+    
+    @media screen and  (min-width: 1440px) {
+           .sub-card .sub-card-head {
+         font-size: 21px;
+      
+         }
+
+         .sub-card .sub-card-text {
+        font-size: 16px;
+        }
+    }
+</style>
+<div class="wrapper">
+    <div class="container">
+        <div class="header">
+            <button class="btn" data-scroll="card1">Data Solutions</button>
+
+            <button class="btn">Analytics & AI</button>
+            <button class="btn">Automations Solutions</button>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <!-- Card detail -->
+                <div class="text-content">
+                    <h3 class="card-head">
+                        Data Solutions
+                    </h3>
+                    <div class="sub-card-container">
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Data Intergation and Quality
+                            </h4>
+                            <p class="sub-card-text">
+                                Seamlessly integrate multiple data sources and ensure high data quality to drive
+                                accurate decision-making.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Data Lake Creation
+                            </h4>
+                            <p class="sub-card-text">
+                                Develop scalable, secure data lakes to store and manage large amounts of data
+                                efficiently.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Data Warehouse
+                            </h4>
+                            <p class="sub-card-text">
+                                Modernise and optimize data warehouse to boost performance and scalability for your
+                                business needs.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Data Governance
+                            </h4>
+                            <p class="sub-card-text">
+                                Establish strong data governance frameworks to maintain data integrity and ensure
+                                compliance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Image -->
+                <div class="img-container">
+                    <img class="img" decoding="async"
+                        src="https://wisualyst.com/wp-content/uploads/2024/09/data_solutions.png" loading="lazy" />
+                </div>
+
+            </div>
+
+            <div class="card">
+                <!-- Card detail -->
+                <div class="text-content">
+                    <h3 class="card-head">
+                        Analytics & AI
+                    </h3>
+                    <div class="sub-card-container">
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Analytics and Visualization
+                            </h4>
+                            <p class="sub-card-text">
+                                Create interactive dashboards and reports for real-time insights into business
+                                performance.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Advanced Analytics & AI/ML
+                            </h4>
+                            <p class="sub-card-text">
+                                Utilize advanced analytics and AI to forecast demand, optimize operations and
+                                personalize experiences.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Advanced NLP
+                            </h4>
+                            <p class="sub-card-text">
+                                Extract actionable insights from text data with advanced senitment analytics and
+                                language models.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                GEN AI
+                            </h4>
+                            <p class="sub-card-text">
+                                Unlock the potential of generative AI to innovate with data, automate content, and
+                                streamline operations.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Computer Vision Modules
+                            </h4>
+                            <p class="sub-card-text">
+                                Improve image and video analysis with facial recognition, object detection, and more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Image -->
+                <div class="img-container">
+                    <img decoding="async" class="img"
+                        src="https://wisualyst.com/wp-content/uploads/2024/09/analytics_ai.png" loading="lazy" />
+                </div>
+
+            </div>
+
+            <div class="card">
+                <!-- Card detail -->
+                <div class="text-content">
+                    <h3 class="card-head">
+                        Automated Solutions
+                    </h3>
+                    <div class="sub-card-container">
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Business Process Automation
+                            </h4>
+                            <p class="sub-card-text">
+                                Automate routine tasks to boost efficiency, reduce costs, and improve productivity
+                                across your organization.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Real-Time Alerting
+                            </h4>
+                            <p class="sub-card-text">
+                                Set up real-time alerts for critical business operations, helping you stay ahead of
+                                issues.
+                            </p>
+                        </div>
+
+                        <div class="sub-card">
+                            <h4 class="sub-card-head">
+                                Application Automation
+                            </h4>
+                            <p class="sub-card-text">
+                                Enhance business functions with automation in data entry, reporting and compliance
+                                processes.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Card Image -->
+                <div class="img-container" style="position: relative; right: -52;">
+                    <img decoding="async" class="img"
+                        src="https://wisualyst.com/wp-content/uploads/2024/09/automation-solutions.png" loading="lazy" />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- GSAP required-->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+<!-- GSAP required-->
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        const cards = document.querySelectorAll('.card');
+        const header = document.querySelector('.header');
+        const btns = document.querySelectorAll('.btn');
+
+        const animation = gsap.timeline();
+        let cardHeight;
+        // stay below header
+        const offset = -150;
+
+        function initCards() {
+            animation.clear();
+            cardHeight = cards[0].offsetHeight;
+            cards.forEach((card, index) => {
+                if (index > 0) {
+                    gsap.set(card, {y: index * cardHeight});
+                    animation.to(card, {y: 0, duration: index * 0.5, ease: "none"}, 0);
+                }
+            });
+        }
+        initCards();
+
+        const scrollTrigger = ScrollTrigger.create({
+            marker: true,
+            trigger: '.container',
+            start: `top+=${offset} top`,
+            pin: true,
+            end: () => `+=${cards.length * cardHeight + header.offsetHeight}`,
+            scrub: true,
+            animation: animation,
+            invalidateOnRefresh: true
+        });
+
+        ScrollTrigger.addEventListener("refreshInit", initCards);
+
+        // Create a ScrollTrigger for button highlighting
+        ScrollTrigger.create({
+            trigger: '.container',
+            start: `top+=${offset} top`,
+            end: () => `+=${cards.length * cardHeight}`,
+            onUpdate: (self) => {
+                const index = Math.round(self.progress * (cards.length - 1));
+                highlightButton(index);
+            }
+        });
+
+        function highlightButton(index) {
+            btns.forEach((btn, btnIndex) => {
+                if (btnIndex === index) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+
+        function scrollToSection(index) {
+            const containerOffset = document.querySelector('.container').getBoundingClientRect().top;
+            let targetY = index * cardHeight;
+
+            switch (index) {
+                case 1:
+                    targetY += 600;
+                    break;
+                case 2:
+                    targetY += 1050;
+                    break;
+                case 3: 
+                    targetY += 1500;
+            }
+
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: {
+                    y: containerOffset + targetY,
+                    autoKill: false
+                },
+                ease: "power2.inOut"
+            });
+        }
+
+        btns.forEach((btn, index) => {
+            btn.addEventListener('click', function () {
+                scrollToSection(index + 1);
+            });
+        });
+    });
+
+</script>
